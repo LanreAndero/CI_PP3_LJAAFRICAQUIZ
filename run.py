@@ -90,7 +90,7 @@ def ask_question(question_data):
     for i, option in enumerate(question_data["options"], start=1):
         colored_option = colored(f"{i}. {option}", "blue")
         print(colored_option)
-    user_input = input("Enter the number of your answer: ")
+    user_input = input("Enter the number of your answer: \n")
     try:
         user_answer = question_data["options"][int(user_input) - 1]
         return user_answer
