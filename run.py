@@ -96,3 +96,41 @@ def ask_question(question_data):
         return user_answer
     except (ValueError, IndexError):
         return None
+
+
+# Function to clear the terminal screen.
+
+
+def clear_screen():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+
+# Function to run the quiz game.
+
+
+def run_quiz(quiz_data):
+    score = 0
+    start_time = time.time()
+
+    for question_data in quiz_data:
+        user_answer = ask_question(question_data)
+        if user_answer is None:
+            print(colored("Invalid input. Skipping this question.\n", "red"))
+            continue
+        if user_answer == question_data["correct_answer"]:
+            print(colored("Correct!\n", "green"))
+            score += 1
+        else:
+            correct_answer = question_data['correct_answer']
+            message = f"Wrong! The correct answer is: {correct_answer}\n"
+            print(colored(message, "red"))
+
+    end_time = time.time()
+    time_spent = end_time - start_time
+    score_message = f"You scored {score} out of {len(quiz_data)} "
+    score_percentage = f"({(score/len(quiz_data)) * 100:.2f}%)."
+    final_score = colored(score_message + score_percentage, "yellow")
+    time_message = colored(f"Time spent: {time_spent:.2f} seconds", "blue")
+
+    print(final_score)
+    print(time_message)
