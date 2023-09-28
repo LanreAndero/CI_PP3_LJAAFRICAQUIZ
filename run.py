@@ -134,3 +134,32 @@ def run_quiz(quiz_data):
 
     print(final_score)
     print(time_message)
+
+# Function to play the quiz game again.
+
+
+def play_quiz_again():
+    clear_screen()
+    print("Welcome to the Africa Quiz!\n")
+    while True:
+        random.shuffle(quiz_data)  # Shuffle the questions for a new game
+        run_quiz(quiz_data)  # Start a fresh game
+        play_again = input("Do you want to play the quiz again? (yes/no): ")
+        if play_again.lower() != "yes":
+            break
+
+
+# Function to shuffle the quiz questions and reset the score.
+
+
+def restart_quiz():
+    clear_screen()
+    print("Welcome to the Africa Quiz!\n")
+    random.shuffle(quiz_data)  # Shuffle the questions
+    run_quiz(quiz_data)  # Start a fresh game
+
+# Run the quiz game.
+
+
+restart_quiz()
+play_quiz_again()
