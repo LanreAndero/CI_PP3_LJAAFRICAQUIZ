@@ -81,7 +81,7 @@ quiz_data = [
     },
 ]
 
-# Function to present the question and get user input for an answer.
+# Function to ask a question and get user input for an answer.
 
 
 def ask_question(question_data):
@@ -89,13 +89,23 @@ def ask_question(question_data):
     for i, option in enumerate(question_data["options"], start=1):
         colored_option = colored(f"{i}. {option}", "blue")
         print(colored_option)
-    user_input = input("Enter the number of your answer: \n")
-    try:
-        user_answer = question_data["options"][int(user_input) - 1]
-        return user_answer
-    except (ValueError, IndexError):
-        return None
 
+    while True:
+        user_input = input("Enter the number of your answer: \n")
+
+        try:
+            user_input = int(user_input)
+            if 1 <= user_input <= len(question_data["options"]):
+                user_answer = question_data["options"][user_input - 1]
+                return user_answer
+            else:
+                message = "Invalid input. Please enter a valid option number."
+                colored_message = colored(message, "red")
+                print(colored_message)
+        except ValueError:
+            message = "Invalid input. Please enter a valid option number."
+            colored_message = colored(message, "red")
+            print(colored_message)
 
 # Function to clear the terminal screen.
 
@@ -136,7 +146,6 @@ def run_quiz(quiz_data):
 
 # Add a congratulatory message based on the user's score
 
-
     if score == len(quiz_data):
         print(colored("Congratulations! You got a perfect score!", "green"))
     elif score >= len(quiz_data) // 2:
@@ -147,27 +156,27 @@ def run_quiz(quiz_data):
 # Function to play the quiz game again.
 
 
-def play_quiz_again(quiz_data):
-    clear_screen()
-    print("Welcome to the Africa Quiz!\n")
+def restart_quiz():
     while True:
-        random.shuffle(quiz_data)  # Shuffle the questions for a new game
+        clear_screen()  # Clears the terminal screen
+        print("Welcome to the Africa Quiz!\n")
+        random.shuffle(quiz_data)  # Shuffle the questions
         run_quiz(quiz_data)  # Start a fresh game
-        play_again = input("Do you want to play the quiz again? (yes/no): ")
-        if play_again.lower() != "yes":
+
+        promt = "\033[91mDo you want to play again? (yes/no): \033[0m\n"
+        play_again = input(promt)
+        play_again = play_again.strip().lower()
+        if play_again != "yes":
+            clear_screen()
             break
 
-# Function to shuffle the quiz questions and reset the score.
 
-
-def restart_quiz():
-    clear_screen()
-    print("Welcome to the Africa Quiz!\n")
-    random.shuffle(quiz_data)  # Shuffle the questions
-    run_quiz(quiz_data)  # Start a fresh game
-
-# Run the quiz game.
-
-
-restart_quiz()
-play_quiz_again(quiz_data)
+if __name__ == "__main__":
+    prompt = "\033[91mWould you like to start the quiz? (yes/no): \033[0m\n"
+    user_input = input(prompt)
+    user_input = user_input.strip().lower()
+    if user_input == "yes":
+        restart_quiz()
+    else:
+        clear_screen()
+        print("Okay, maybe next time!")
