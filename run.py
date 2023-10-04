@@ -1,6 +1,5 @@
 from termcolor import colored
 import time
-import os
 import random
 
 # Define the questions and answers as a list of dictionaries.
@@ -102,7 +101,7 @@ def ask_question(question_data):
 
 
 def clear_screen():
-    os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n" * 100)  # Print 100 empty lines to "clear" the screen
 
 
 # Function to run the quiz game.
@@ -134,6 +133,16 @@ def run_quiz(quiz_data):
 
     print(final_score)
     print(time_message)
+
+# Add a congratulatory message based on the user's score
+
+
+    if score == len(quiz_data):
+        print(colored("Congratulations! You got a perfect score!", "green"))
+    elif score >= len(quiz_data) // 2:
+        print(colored("Good job! You did well.", "green"))
+    else:
+        print(colored("You can do better next time.", "red"))
 
 # Function to play the quiz game again.
 
