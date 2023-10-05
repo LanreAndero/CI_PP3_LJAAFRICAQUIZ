@@ -127,10 +127,7 @@ quiz_data = [
     },
     {
         "question": "Which African nation, despite its proximity to European",
-        "question_contd": [
-            "colonies, maintained its",
-            "sovereignty during the Scramble for Africa?"
-        ],
+        "question_contd": "colonies, maintained its sovereignty?",
         "options": ["Kenya", "Uganda", "Somalia", "Morocco"],
         "correct_answer": "Morocco"
     },
@@ -147,6 +144,11 @@ quiz_data = [
 
 def ask_question(question_data):
     print(question_data["question"])
+
+    # Check if there's a continuation
+    if "question_contd" in question_data:
+        print(question_data["question_contd"])
+
     for i, option in enumerate(question_data["options"], start=1):
         colored_option = colored(f"{i}. {option}", "blue")
         print(colored_option)
