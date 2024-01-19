@@ -184,12 +184,12 @@ def ask_question(question_data):
 def display_logo():
     print(colored(logo, "cyan"))
 
-
 # Function to clear the terminal screen.
 
 
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
+    print("\n" * 100)  # Print 100 empty lines to "clear" the screen
     display_logo()
 
 
