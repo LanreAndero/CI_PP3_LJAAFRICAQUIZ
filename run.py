@@ -1,4 +1,5 @@
 from termcolor import colored
+import os
 import time
 import random
 from colors import Color as Col
@@ -192,9 +193,7 @@ def ask_question(question_data):
                 user_answer = question_data["options"][user_input - 1]
                 return user_answer
             else:
-                message = "Invalid input. Please enter a valid option number."
-                colored_message = colored(message, "red")
-                print(colored_message)
+                raise ValueError
         except ValueError:
             message = "Invalid input. Please enter a valid option number."
             colored_message = colored(message, "red")
@@ -204,7 +203,7 @@ def ask_question(question_data):
 
 
 def clear_screen():
-    print("\n" * 100)  # Print 100 empty lines to "clear" the screen
+    os.system('cls' if os.name == 'nt' else 'clear')
     logo()
 
 
@@ -259,7 +258,7 @@ def restart_quiz():
         run_quiz(quiz_data)  # Start a fresh game
 
         promt = "\033[91mDo you want to play again? (yes/no): \033[0m\n"
-        play_again = input(promt)
+        play_again = input(prompt)
         play_again = play_again.strip().lower()
         if play_again != "yes":
             clear_screen()
