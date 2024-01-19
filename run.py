@@ -149,6 +149,8 @@ logo = """
 (__ \__) / /    / /  (    / \  _(_  (_.  / /    (_X  (_/  _(_  /  
 """
 
+print("Welcome to the Africa Quiz!\n")
+
 # Function to ask a question and get user input for an answer.
 
 
@@ -261,5 +263,5 @@ if __name__ == "__main__":
         restart_quiz()
     else:
         clear_screen()
-        display_logo()
         print("\033[91mOkay, maybe next time!\033[0m")
+        display_logo()
