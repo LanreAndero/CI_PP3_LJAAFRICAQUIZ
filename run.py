@@ -1,6 +1,7 @@
 from termcolor import colored
 import time
 import random
+from colors import Color as Col
 
 # Define the questions and answers as a list of dictionaries.
 quiz_data = [
@@ -139,6 +140,35 @@ quiz_data = [
     },
 ]
 
+# Define a simple Col class for color formatting
+
+
+class Col:
+    BLUE = "\033[94m"
+    LOGO_Y = "\033[93m"
+    LOGO_R = "\033[91m"
+
+# Define the logo function
+
+
+def logo():
+    """
+    Display quiz name
+    """
+    print(Col.BLUE + "Welcome to:")
+    print(" ")
+    print(Col.LOGO_Y + "                                           ")                                                                            
+    print(Col.LOGO_R + "| ~|~ /\    /\ |~|~)~|~/~` /\   /~\| |~|~~/")
+    print(Col.LOGO_R + "|_L| /~~\  /~~\|~|~\_|_\_,/~~\  \_X|_|_|_/_")
+    print(Col.LOGO_Y + "                                           ")
+    print(" ")
+    print(" ")
+    print(Col.BLUE + "                             LJA AFRICAN QUIZ")
+    print(" ")
+    print(Col.BLUE + "Test yourself knowledge in African Geography")
+    print(" ")
+    print(" ")
+
 # Function to ask a question and get user input for an answer.
 
 
@@ -175,6 +205,7 @@ def ask_question(question_data):
 
 def clear_screen():
     print("\n" * 100)  # Print 100 empty lines to "clear" the screen
+    logo()
 
 
 # Function to run the quiz game.
@@ -222,6 +253,7 @@ def run_quiz(quiz_data):
 def restart_quiz():
     while True:
         clear_screen()  # Clears the terminal screen
+        logo()
         print("Welcome to the Africa Quiz!\n")
         random.shuffle(quiz_data)  # Shuffle the questions
         run_quiz(quiz_data)  # Start a fresh game
@@ -231,10 +263,12 @@ def restart_quiz():
         play_again = play_again.strip().lower()
         if play_again != "yes":
             clear_screen()
+            logo()
             break
 
 
 if __name__ == "__main__":
+    logo()
     prompt = "\033[91mWould you like to start the quiz? (yes/no): \033[0m\n"
     user_input = input(prompt)
     user_input = user_input.strip().lower()
@@ -242,4 +276,5 @@ if __name__ == "__main__":
         restart_quiz()
     else:
         clear_screen()
+        logo()
         print("\033[91mOkay, maybe next time!\033[0m")
