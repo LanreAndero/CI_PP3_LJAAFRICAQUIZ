@@ -149,7 +149,7 @@ logo = """
 (__ \__) / /    / /  (    / \  _(_  (_.  / /    (_X  (_/  _(_  /  
 """
 
-print(colored("Welcome to the Africa Quiz!\n", "orange"))
+print(colored("Welcome to the Africa Quiz!\n", "yellow"))
 
 # Function to ask a question and get user input for an answer.
 
