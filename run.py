@@ -149,7 +149,7 @@ logo = """
 (__ \__) / /    / /  (    / \  _(_  (_.  / /    (_X  (_/  _(_  /  
 """
 
-print("Welcome to the Africa Quiz!\n")
+print(coloured("Welcome to the Africa Quiz!\n", "orange"))
 
 # Function to ask a question and get user input for an answer.
 
@@ -193,7 +193,6 @@ def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\n" * 100)  # Print 100 empty lines to "clear" the screen
     display_logo()
-
 
 # Function to run the quiz game.
 
