@@ -1,4 +1,4 @@
-# LJA Africa Quiz ![LJA Africa Quiz Logo](docs/africa.png){ width=200 }
+# LJA Africa Quiz ! <img src="docs/africa.pdg" style="width: 40px;height:40px;">
 
 **Developer: [Lanre James Andero]**
 
