@@ -194,7 +194,7 @@ Manual testing was conducted on various aspects of the quiz, including:
 - **About the Quiz:**
   - Users can access additional information about the quiz.
 
-<details><summary>Scores, Time and Message</summary>
+<details><summary>Test Results</summary>
 <img src="docs/testing/lighthouse-desktop.png">
 <img src="docs/testing/lighthouse-mobile.png">
 <img src="docs/testing/pep8-python-code-valdation.png">
@@ -244,6 +244,14 @@ I would like to thank everyone who supported me in the development of this proje
 - My mentor Mo for professional guidance, helpful feedback and words of encouragement whilst creating the project. Also, for encouraging me to learn about the unit test and including it within this project.
 - My friends for their support and playing/testing the quiz with me
 - Code Institute community on Slack for resources and support.
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+If you have any questions or suggestions regarding the LJA Africa Quiz, feel free to contact us at [lanreandero@gmai.com](mailto:lanreandero@gmail.com).
 
 Happy quizzing! 🌍🇦🇷🤓
 
