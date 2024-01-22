@@ -6,6 +6,10 @@
 
 ![Mockup image](docs/home-screen.png)
 
+![Responsive image](docs/amiresponsive.png)
+
+[amiresponsive](https://ui.dev/amiresponsive?url=https://lja-africa-quiz-94254bc80955.herokuapp.com/)
+
 ## About
 
 Welcome to the LJA Africa Quiz! Test your knowledge about Africa with this engaging and educational quiz game. Answer questions about geography, history, culture, and more to prove your expertise on the diverse continent.
@@ -58,7 +62,7 @@ The quiz is suitable for anyone interested in testing and expanding their knowle
 ### User Requirements and Expectations
 
 - Access to an easy-to-navigate quiz platform.
-- Clear instructions on how to play the game.
+- Clear instructions on how to play the quiz.
 - Immediate feedback on quiz performance.
 - Engaging questions covering various aspects of Africa.
 
@@ -67,18 +71,32 @@ The quiz is suitable for anyone interested in testing and expanding their knowle
 <details><summary>Click here to view instructions</summary>
 
 #### Main Menu
-Upon entering the quiz, users will encounter the main menu featuring the LJA Africa Quiz Logo. The menu offers options:
+Upon entering the quiz, users will encounter the main menu featuring the LJA Africa Quiz ASCII Art. The menu offers options:
 
-1. Start Quiz
-2. Quit Quiz
+1. ASCII-Generator
+2. Start Quiz
+3. Quit Quiz
+
+<details><summary>Main Menu Options</summary>
+<img src="docs/text-ascii-art.png">
+<img src="docs/home-screen.png">
+</details>
 
 Players can type either yes or no option to navigate through the quiz.
 
 #### Start Quiz
 Upon selecting this option, players will be presented with quiz questions. They can input their numerical answers, and the quiz will provide instant feedback.
 
+<details><summary>Star Quiz Option - Yes</summary>
+<img src="docs/features/user-story-yes.png">
+</details>
+
 #### Completion Scores
 Players can see their highest scores achieved at completion of the quiz.
+
+<details><summary>Scores, Time and Message</summary>
+<img src="docs/features/user-story-scores-time.png">
+</details>
 
 #### About the Quiz
 Users can learn more about the purpose and features of the LJA Africa Quiz.
@@ -86,6 +104,8 @@ Users can learn more about the purpose and features of the LJA Africa Quiz.
 #### Quit game
 With the quit quiz option, the user exits the program with Okay, maybe next time! message.
 
+<details><summary>Quit Quiz Option - No</summary>
+<img src="docs/features/user-story-no.png">
 </details>
 
 ## User Stories
@@ -149,6 +169,11 @@ User inputs are validated to ensure that they are appropriate for quiz participa
 - Answers are checked for correctness.
 - Inputs for menu options are validated.
 
+<details><summary>Scores, Time and Message</summary>
+<img src="docs/features/user-story-correct-answer.png">
+<img src="docs/features/user-story-wrong-answer.png">
+</details>
+
 ## Testing
 
 ### Manual Testing
@@ -168,6 +193,12 @@ Manual testing was conducted on various aspects of the quiz, including:
 
 - **About the Quiz:**
   - Users can access additional information about the quiz.
+
+<details><summary>Scores, Time and Message</summary>
+<img src="docs/testing/lighthouse-desktop.png">
+<img src="docs/testing/lighthouse-mobile.png">
+<img src="docs/testing/pep8-python-code-valdation.png">
+</details>  
 
 ### Automated Testing
 
