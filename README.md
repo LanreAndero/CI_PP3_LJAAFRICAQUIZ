@@ -67,12 +67,12 @@ The quiz is suitable for anyone interested in testing and expanding their knowle
 <details><summary>Click here to view instructions</summary>
 
 #### Main Menu
-Upon entering the quiz, users will encounter the main menu featuring the LJA Africa Quiz logo. The menu offers options:
+Upon entering the quiz, users will encounter the main menu featuring the LJA Africa Quiz Logo. The menu offers options:
 
 1. Start Quiz
-2. Quiz to play again
+2. Quit Quiz
 
-Players can yes or no option to navigate through the quiz.
+Players can type either yes or no option to navigate through the quiz.
 
 #### Start Quiz
 Upon selecting this option, players will be presented with quiz questions. They can input their numerical answers, and the quiz will provide instant feedback.
@@ -82,6 +82,9 @@ Players can see their highest scores achieved at completion of the quiz.
 
 #### About the Quiz
 Users can learn more about the purpose and features of the LJA Africa Quiz.
+
+#### Quit game
+With the quit quiz option, the user exits the program with Okay, maybe next time! message.
 
 </details>
 
@@ -95,8 +98,8 @@ Users can learn more about the purpose and features of the LJA Africa Quiz.
 2. **As a learner, I want clear instructions on how to participate in the quiz.**
    - The user manual provides step-by-step guidance on navigating through the quiz.
 
-3. **As a competitor, I want to view high scores to see where I stand.**
-   - The "Completion Scores and time" option allows players to the scores achieved by them.
+3. **As a competitor, displaying the scores achieved at completion helps to know where I stand.**
+   - The "Completion Scores and time spent" option allows players to see the scores achieved by them.
 
 ### Site Owner
 
@@ -129,9 +132,14 @@ Users can learn more about the purpose and features of the LJA Africa Quiz.
 - random - used to alternate questions at start of the quiz
 - time - used to displayed delayed messages in the terminal
 
+#### Third Party Libraries
+- [colorama](https://pypi.org/project/colorama/) - JUSTIFICATION: I used this library to add color to the terminal and enhance user experience. I marked warning/error information with red color and other user feedback with blue, green and yellow.
+
+[Back to Table Of Contents](#table-of-contents)
+
 ## Features
 
-- Interactive quiz questions
+- Interactive quiz questions with multiple choice answers
 - Completion scores and time display
 - About the Quiz section for additional information
 
@@ -152,8 +160,8 @@ Manual testing was conducted on various aspects of the quiz, including:
   - Selecting options leads to the intended sections (Start Quiz, Quit Quiz, Restart the Quiz with Run Program).
 
 - **Quiz Gameplay:**
-  - Players can input their answers during the quiz.
-  - Immediate feedback is provided for each question.
+  - Players can input their numeric answers during the quiz.
+  - Immediate feedback is provided for each question attempted.
 
 - **Scores:**
   - The "Completion Scores" correctly displays the scores achieved by players.
@@ -177,15 +185,27 @@ Automated testing was not implemented for this quiz.
 
 The quiz is currently deployed on [Heroku]. Users can access it by visiting [https://lja-africa-quiz-94254bc80955.herokuapp.com/].
 
-To run the quiz locally, follow these steps:
-
-1. Clone the repository to your local machine.
-2. Open the 'index.html' file in a web browser.
-3. Start the quiz and enjoy testing your knowledge about Africa!
+### Forking the GitHub Repository
+1. Go to the GitHub repository
+2. Click on Fork button in top right corner
+3. You will then have a copy of the repository in your own GitHub account.
+   
+### Making a Local Clone
+1. Go to the GitHub repository 
+2. Locate the Code button above the list of files and click it
+3. Highlight the "HTTPS" button to clone with HTTPS and copy the link
+4. Open Git Bash
+5. Change the current working directory to the one where you want the cloned directory
+6. Type git clone and paste the URL from the clipboard ($ git clone <span>https://</span>github.com/YOUR-USERNAME/YOUR-REPOSITORY)
+7. Press Enter to create your local clone
 
 ## Credits
 
 - Quiz content and design created by [Lanre James Andero].
+
+### Code
+- [ASCII Art Generator](https://ascii-generator.site/r/tTgmee/) was used to create quiz title - logo
+- Code Institute - for git template IDE and "Love Sandwiches - Essentials Project" which helped me with my project.
 
 ## Acknowledgements
 
@@ -194,5 +214,6 @@ I would like to thank everyone who supported me in the development of this proje
 - My friends for their support and playing/testing the quiz with me
 - Code Institute community on Slack for resources and support.
 
-
 Happy quizzing! 🌍🇦🇷🤓
+
+[Back to Table Of Contents](#table-of-contents)
