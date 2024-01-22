@@ -262,5 +262,5 @@ if __name__ == "__main__":
         restart_quiz()
     else:
         clear_screen()
-        print("\033[91mOkay, maybe next time!\033[0m")
         display_logo()
+        print("\033[91mOkay, maybe next time!\033[0m")

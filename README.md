@@ -21,8 +21,6 @@ Welcome to the LJA Africa Quiz! Test your knowledge about Africa with this engag
   - [User Stories](#user-stories)
     - [Users](#users)
     - [Site Owner](#site-owner)
-  - [Technical Design](#technical-design)
-    - [Flowchart](#flowchart)
   - [Technologies Used](#technologies-used)
     - [Languages](#languages)
     - [Frameworks & Tools](#frameworks--tools)
@@ -43,7 +41,7 @@ Welcome to the LJA Africa Quiz! Test your knowledge about Africa with this engag
 
 - Learn and have fun while testing knowledge about Africa.
 - Engage in an interactive quiz game.
-- Compete with other players to achieve high scores.
+- Complete the quiz as many times as you which to achieve highest scores.
 
 ### Site Owner Goals
 
@@ -55,7 +53,7 @@ Welcome to the LJA Africa Quiz! Test your knowledge about Africa with this engag
 
 ### Target Audience
 
-The quiz is suitable for anyone interested in testing and expanding their knowledge of Africa. Recommended for players aged 12 and above.
+The quiz is suitable for anyone interested in testing and expanding their knowledge of Africa. Recommended for players aged 10 and above.
 
 ### User Requirements and Expectations
 
@@ -69,20 +67,18 @@ The quiz is suitable for anyone interested in testing and expanding their knowle
 <details><summary>Click here to view instructions</summary>
 
 #### Main Menu
-Upon entering the quiz, users will encounter the main menu featuring the LJA Africa Quiz logo. The menu offers several options:
-1. Start Quiz
-2. Complete Quiz
-3. View Scores
-4. Option to Play again or quit quiz
-5. Restart the Quiz to play again
+Upon entering the quiz, users will encounter the main menu featuring the LJA Africa Quiz logo. The menu offers options:
 
-Players can select a numeric option to navigate through the quiz.
+1. Start Quiz
+2. Quiz to play again
+
+Players can yes or no option to navigate through the quiz.
 
 #### Start Quiz
-Upon selecting this option, players will be presented with quiz questions. They can input their answers, and the quiz will provide instant feedback.
+Upon selecting this option, players will be presented with quiz questions. They can input their numerical answers, and the quiz will provide instant feedback.
 
-#### View High Scores
-Players can check the highest scores achieved by other participants.
+#### Completion Scores
+Players can see their highest scores achieved at completion of the quiz.
 
 #### About the Quiz
 Users can learn more about the purpose and features of the LJA Africa Quiz.
@@ -100,7 +96,7 @@ Users can learn more about the purpose and features of the LJA Africa Quiz.
    - The user manual provides step-by-step guidance on navigating through the quiz.
 
 3. **As a competitor, I want to view high scores to see where I stand.**
-   - The "View High Scores" option allows players to check the top scores achieved by others.
+   - The "Completion Scores and time" option allows players to the scores achieved by them.
 
 ### Site Owner
 
@@ -108,37 +104,35 @@ Users can learn more about the purpose and features of the LJA Africa Quiz.
    - The quiz is designed to be both entertaining and informative.
 
 2. **As the site owner, I want to encourage repeat visits to the quiz platform.**
-   - Providing a "View High Scores" feature encourages users to return and improve their scores.
+   - Providing a "Completion Scores" feature encourages users to return and improve their scores.
 
 3. **As the site owner, I want to showcase the rich diversity of Africa through quiz questions.**
    - The quiz covers a range of topics to highlight the various aspects of the continent.
-
-## Technical Design
-
-### Flowchart
-
-*(Include a flowchart illustrating the quiz navigation and question flow.)*
 
 ## Technologies Used
 
 ### Languages
 
-- HTML
-- CSS
-- JavaScript
+- [Python](https://www.python.org/) programming language for the logic of the program
 
 ### Frameworks & Tools
 
-- None
+- [Font Awesome](https://fontawesome.com/) - icons from Font Awesome were used in the footer below the program terminal
+- [GitHub](https://github.com/) was used as a remote repository to store project code
+- [PEP8](http://pep8online.com/) was used to check my code against Python conventions
+- [Heroku Platform](https://https://heroku.com/) was used to deploy the project into live environment
 
 ### Libraries
 
-- None
+#### Python Libraries
+- os - used to clear terminal
+- random - used to alternate questions at start of the quiz
+- time - used to displayed delayed messages in the terminal
 
 ## Features
 
 - Interactive quiz questions
-- High scores leaderboard
+- Completion scores and time display
 - About the Quiz section for additional information
 
 ## Validation
@@ -162,7 +156,7 @@ Manual testing was conducted on various aspects of the quiz, including:
   - Immediate feedback is provided for each question.
 
 - **Scores:**
-  - The "View High Scores" option correctly displays the scores achieved by players.
+  - The "Completion Scores" message correctly displays the scores achieved by players.
 
 - **About the Quiz:**
   - Users can access additional information about the quiz.
