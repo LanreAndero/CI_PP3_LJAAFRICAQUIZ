@@ -143,11 +143,10 @@ quiz_data = [
 # Define the logo as a string
 
 
-logo = """
-    ___    _      _   ___  __   ___   _    _      _        ___ __ 
- )    (   /_)    /_)  )_   )_)   )   / `  /_)    / )  / /   )   / 
-(__ \__) / /    / /  (    / \  _(_  (_.  / /    (_X  (_/  _(_  /  
-"""
+logo = """ ___    _      _   ___  __   ___   _    _      _        ___ __ 
+        )    (   /_)    /_)  )_   )_)   )   / `  /_)    / )  / /   )   /
+       (__ \__) / /    / /  (    / \  _(_  (_.  / /    (_X  (_/  _(_  /
+    """
 
 print(colored("Welcome to the Africa Quiz!\n", "yellow"))
 
@@ -192,7 +191,6 @@ def display_logo():
 def clear_screen():
     os.system('cls' if os.name == 'nt' else 'clear')
     print("\n" * 100)  # Print 100 empty lines to "clear" the screen
-    display_logo()
 
 # Function to run the quiz game.
 
