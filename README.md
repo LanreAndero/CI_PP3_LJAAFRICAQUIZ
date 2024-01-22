@@ -1,4 +1,4 @@
-# LJA Africa Quiz ![LJA Africa Quiz Logo](docs/quiz-logo.png)
+# LJA Africa Quiz ![LJA Africa Quiz Logo](docs/africa.png){ width=200 }
 
 **Developer: [Lanre James Andero]**
 
@@ -119,7 +119,7 @@ Users can learn more about the purpose and features of the LJA Africa Quiz.
 
 - [Font Awesome](https://fontawesome.com/) - icons from Font Awesome were used in the footer below the program terminal
 - [GitHub](https://github.com/) was used as a remote repository to store project code
-- [PEP8](http://pep8online.com/) was used to check my code against Python conventions
+- [PEP8](https://extendsclass.com/python-tester.html/) was used to check my code against Python conventions
 - [Heroku Platform](https://https://heroku.com/) was used to deploy the project into live environment
 
 ### Libraries
@@ -139,7 +139,7 @@ Users can learn more about the purpose and features of the LJA Africa Quiz.
 
 User inputs are validated to ensure that they are appropriate for quiz participation. For example:
 - Answers are checked for correctness.
-- Numeric inputs for menu options are validated.
+- Inputs for menu options are validated.
 
 ## Testing
 
@@ -149,14 +149,14 @@ Manual testing was conducted on various aspects of the quiz, including:
 
 - **Quiz Navigation:**
   - Users can smoothly navigate through the main menu.
-  - Selecting options leads to the intended sections (Start Quiz, Restart the Quiz, About the Quiz).
+  - Selecting options leads to the intended sections (Start Quiz, Quit Quiz, Restart the Quiz with Run Program).
 
 - **Quiz Gameplay:**
   - Players can input their answers during the quiz.
   - Immediate feedback is provided for each question.
 
 - **Scores:**
-  - The "Completion Scores" message correctly displays the scores achieved by players.
+  - The "Completion Scores" correctly displays the scores achieved by players.
 
 - **About the Quiz:**
   - Users can access additional information about the quiz.
